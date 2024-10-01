@@ -1,0 +1,124 @@
+@primary-color: #4c7aaf;
+@secondary-color: #1a1a1a;
+@accent-color: #ff6b6b;
+@font-color: #ffffff;
+@font-stack: 'Roboto', Arial, sans-serif;
+
+body {
+    background-color: @secondary-color;
+    font-family: @font-stack;
+    margin: 0;
+    padding: 0;
+    color: @font-color;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, darken(@primary-color, 10%), @primary-color);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+
+            li {
+                margin: 0 15px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 18px;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: @accent-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    section {
+        margin-bottom: 60px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        h1 {
+            color: @accent-color;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+footer {
+    background: @primary-color;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+
+    p {
+        margin: 0;
+        font-size: 0.9em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                margin: 10px 0;
+            }
+        }
+    }
+
+    main {
+        section {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
